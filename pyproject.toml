@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "trip-planner"
+version = "0.1.0"
+description = "A tool to plan trips using public transportation and private vehicles."
+authors = ["Joao Mouram", "Brandon Hancock"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0.0"
+crewai = "*"
+unstructured = "*"
+pyown = "*"
+tools = "*"
+langchain_openai = "*"
+python-dotenv = "*"
+pydantic-core = "*"
+
+[tool-pyright]
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
